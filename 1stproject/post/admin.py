@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import webpost
+from .models import WebPost
 
 # Register your models here.
 
-admin.site.register(webpost)
+admin.site.register(WebPost)
 
 # adminonkar

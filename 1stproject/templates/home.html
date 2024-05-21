@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
 </head>
-<body>
-    <h1>Hello Hello..!!</h1>
+
+<body style="background-color: beige;">
+    <h1 style="color: rgb(0, 0, 0); background-color: rgb(178, 219, 255);">Post & Reels..!!</h1>
+    <div style="background-color: rgb(187, 233, 233);">
+        <ol>
+            {% for i in webpost %} <br>
+            <h2
+                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(179, 105, 185); text-transform: uppercase;">
+                <li>{{i.name}}</li>
+            </h2>
+            <img src="{{i.image.url}}" style="height: 150px; width: 150px; border-radius: 10px;">
+            <h4 style="text-transform: capitalize;">{{i.post_type}}</h4>
+            <h4
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: italic; text-transform: capitalize;">
+                {{ i.caption }}</h4>
+            <h4
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: italic; text-transform: capitalize;">
+                {{ i.likes.all }}</h4>
+            {% endfor %} <br>
+        </ol>
+    </div>
 </body>
+
 </html>
